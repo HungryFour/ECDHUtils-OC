@@ -1,0 +1,16 @@
+PODS:
+  - OpenSSL (1.0.210)
+
+DEPENDENCIES:
+  - OpenSSL (~> 1.0.210)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - OpenSSL
+
+SPEC CHECKSUMS:
+  OpenSSL: 246ffb948e9d56466727fd318134af35f5aa764e
+
+PODFILE CHECKSUM: 3d9e65efc507b861654bc039b0e61f75bf7443c5
+
+COCOAPODS: 1.5.0

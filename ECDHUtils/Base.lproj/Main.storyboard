@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td4-Pe-g0c">
+                                <rect key="frame" x="16" y="35" width="117" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PQP-s4-6gP"/>
+                                </constraints>
+                                <state key="normal" title="生成A端公钥私钥"/>
+                                <connections>
+                                    <action selector="generateAKeypairs" destination="BYZ-38-t0r" eventType="touchUpInside" id="rX8-nV-fv6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-12-6p4">
+                                <rect key="frame" x="242" y="35" width="117" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rjm-1h-tKi"/>
+                                </constraints>
+                                <state key="normal" title="生成B端公钥私钥"/>
+                                <connections>
+                                    <action selector="generateBKeypairs" destination="BYZ-38-t0r" eventType="touchUpInside" id="t0h-Sa-Ka0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-lG-YKS">
+                                <rect key="frame" x="142" y="73" width="92" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UZK-m8-KXd"/>
+                                </constraints>
+                                <state key="normal" title="生成协商密钥"/>
+                                <connections>
+                                    <action selector="generateDHKey" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ME-qF-cEC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="待生成.." translatesAutoresizingMaskIntoConstraints="NO" id="BKk-P9-kKE">
+                                <rect key="frame" x="20" y="133" width="335" height="514"/>
+                                <color key="backgroundColor" red="0.98180839540252096" green="1" blue="0.7042352806498049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.22120520534223387" blue="0.30722793158355921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.12570942865597798" green="0.70128093274111669" blue="0.091475265302735947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IKg-lG-YKS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="8ky-Xb-U9M"/>
+                            <constraint firstItem="aNX-12-6p4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="F5X-ZK-M8d"/>
+                            <constraint firstItem="td4-Pe-g0c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Frd-Bw-hA4"/>
+                            <constraint firstItem="BKk-P9-kKE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IrB-fh-8ca"/>
+                            <constraint firstItem="BKk-P9-kKE" firstAttribute="top" secondItem="IKg-lG-YKS" secondAttribute="bottom" constant="20" id="NO6-P2-snm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aNX-12-6p4" secondAttribute="trailing" constant="16" id="RQt-Bd-0xu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BKk-P9-kKE" secondAttribute="trailing" constant="20" id="VFX-fc-sOz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BKk-P9-kKE" secondAttribute="bottom" constant="20" id="jjL-9Z-pdp"/>
+                            <constraint firstItem="IKg-lG-YKS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="k0C-I4-hJ7"/>
+                            <constraint firstItem="td4-Pe-g0c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rXS-0a-kX7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="logTextView" destination="BKk-P9-kKE" id="bHv-RP-VNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
